@@ -1,6 +1,10 @@
-i = 1
-j = 2
+wordDict = {}
+words = ['a', 'b', 'c', 'b']
 
-i = j = 3
+for word in words:
+    wordDict.setdefault(word, 0)
+    wordDict[word]+=1
 
-print(i, j)
+print(wordDict)
+
+print(words.count('d'))
