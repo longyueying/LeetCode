@@ -1,10 +1,5 @@
-wordDict = {}
-words = ['a', 'b', 'c', 'b']
 
-for word in words:
-    wordDict.setdefault(word, 0)
-    wordDict[word]+=1
+s = '(((((((((())))))))))))'
+braketStack = ['(']*(s.count('('))
+print(braketStack)
 
-print(wordDict)
-
-print(words.count('d'))
