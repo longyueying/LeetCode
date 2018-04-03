@@ -1,3 +1,4 @@
-for i, j in range(3,7), range(4,8):
-    print(i, j)
+list = [[0 for i in range(9)] for j in range (9)]
+print(list)
 
+print(ord('b') - ord('a'))
