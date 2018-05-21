@@ -4,10 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if len(nums) == 0:
-            return 1
         for i in range(len(nums)):
-            while (nums[i] <= len(nums) and nums[i] > 0 and nums[i]!=i+1):
+            while (nums[i] <= len(nums) and nums[i] > 0 and nums[i]!=i+1 and nums[nums[i] - 1]!=nums[i]):
                 temp = nums[i]
                 nums[i] = nums[temp - 1]
                 nums[temp - 1] = temp
@@ -15,8 +13,8 @@ class Solution(object):
             if nums[i] != i + 1:
                 return i + 1
 
-        return len(nums)
+        return len(nums)+1
 
 if __name__ =='__main__':
     solu = Solution()
-    print(solu.firstMissingPositive([]))
+    print(solu.firstMissingPositive([2,2]))
