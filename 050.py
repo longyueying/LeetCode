@@ -11,11 +11,18 @@ class Solution(object):
         elif n==1:
             return x
         else:
+            if n < 0:
+                x = 1/x
+                n = -n
             result = x
-            for i in range(n-2):
-                result = result * x
+
+            if n % 2 == 0:
+                result = self.myPow(x*x, n/2)
+            else:
+                n = n-1
+                result = x*self.myPow(x*x, n/2)
             return result
 
 if __name__ == "__main__":
     solution = Solution()
-    solution.myPow(2.0, 10)
+    print(solution.myPow(0.00001,2147483647))
