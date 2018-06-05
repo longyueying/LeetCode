@@ -1,2 +1,2 @@
-l = [[i for i in range(10)] for j in range(10)]
-print(l)
+
+print(''.join([1,2,3,4]))
