@@ -1,2 +1,2 @@
 
-print(''.join([1,2,3,4]))
+print(pow(10,2))
