@@ -14,17 +14,18 @@ class Solution(object):
         :rtype: TreeNode
         """
         if root==None:
-            return
-        elif root.val < L:
-            root = root.right
-            self.trimBST(root, L, R)
+            return None
+
+        root.left = self.trimBST(root.left, L, R)
+        root.right = self.trimBST(root.right, L, R)
+
+        if root.val < L:
+            return root.right
         elif root.val > R:
-            root = root.left
-            self.trimBST(root, L, R)
+            return root.left
         else:
-            self.trimBST(root.left, L, R)
-            self.trimBST(root.right, L, R)
-        return root
+            return root
+
 if __name__=="__main__":
     solu = Solution()
     a  = TreeNode(0)
@@ -33,13 +34,14 @@ if __name__=="__main__":
     d = TreeNode(3)
     e = TreeNode(4)
 
-    d.left = a
-    d.right = e
-    a.right = c
-    c.left = b
+    # d.left = a
+    # d.right = e
+    # a.right = c
+    # c.left = b
+    b.left = a
+    b.right = c
+    res = solu.trimBST(b, 1,2)
 
-    root = solu.trimBST(d, 1,3)
-
-    print(root.val)
-    print(root.left.val)
-    print(root.right.val)
+    print(res.val)
+    #print(res.left.val)
+    print(res.right.val)
