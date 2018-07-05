@@ -26,7 +26,7 @@ class Solution(object):
                     b = TreeNode(max(nums[cur+1:end+1]))
                     root.right = b
                     solver(b, nums, cur+1, end)
-        solver(root, nums, 0, len(nums)-1)
+        solver(root, nums, 0, len(nums)- 1)
 
 
 
