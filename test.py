@@ -1,2 +1,1 @@
-
-print([[0]*(5-1) for i in range(2)])
+print([[1,2,3],[1,2,3]].shape)
