@@ -7,4 +7,4 @@ class Solution(object):
         for i in len(nums):
             nums[abs(nums[i])] = -abs(nums[abs(nums[i])])
         for i in len(nums):
-            if nums[i] < 0
+            if nums[i] < 0:
