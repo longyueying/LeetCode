@@ -1,1 +1,2 @@
-print([[1,2,3],[1,2,3]].shape)
+import random
+print(random.shuffle([1,2,4]))
