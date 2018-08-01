@@ -1,2 +1,1 @@
-import random
-print(random.shuffle([1,2,4]))
+print(1&4)
