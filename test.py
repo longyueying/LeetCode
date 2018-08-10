@@ -1,1 +1,1 @@
-print('1'*0)
+print('21'.isnumeric())
