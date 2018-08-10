@@ -1,1 +1,1 @@
-print('12'.isdigit())
+print(int('-10'))
