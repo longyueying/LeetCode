@@ -1,23 +1,20 @@
-class Solution(object):
-    def minWindow(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: str
-        """
-        end = -1
-        dic  = {}
-        begin = -1
-        for i in range(len(s)):
-            if s[i] in t:
-                begin = i
-                dic[s[i]] = i
-                break
-        if begin==-1:
-            return ''
+import collections
+def minWindow( s, t):
+    need, missing = collections.Counter(t), len(t)
+    print(need)
+    i = I = J = 0
+    for j, c in enumerate(s, 1):
 
-        for i in range(begin+1, len(s)):
-            if s[i] in t:
-                dic.setdefault(s[i], 0)
-                if len(dic) == len(t):
-                    
+        missing -= need[c] > 0
+        need[c] -= 1
+        if not missing:
+            while i < j and need[s[i]] < 0:
+
+                need[s[i]] += 1
+                print(need)
+                i += 1
+            if not J or j - i <= J - I:
+                I, J = i, j
+    return s[I:J]
+minWindow("ADOBECODEBANC","ABC")
+
