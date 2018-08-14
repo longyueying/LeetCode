@@ -4,9 +4,21 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        self.res = [[]]
+        res = []
+        length = len(nums)
 
-        def solver(status):
-            if len(status)==0:
-                for num in nums:
-                    solver([num])
+        def solver(status, start):
+            res.append(status)
+            if start==length:
+                return
+            else:
+                for i in range(start, length):
+                    status.append(nums[i])
+                    solver(status[:], i+1)
+                    status.pop()
+        solver([], 0)
+        return res
+
+if __name__=="__main__":
+    s = Solution()
+    print(s.subsets([1,2,3]))
