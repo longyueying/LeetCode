@@ -1,1 +1,3 @@
-print('0'.lower())
+import collections
+t = collections.defaultdict(list)
+print(t)
