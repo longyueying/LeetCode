@@ -1,6 +1,2 @@
-from collections import defaultdict
-
-dic = defaultdict()
-dic[2] = 9
-if dic[0]:
-    print('11111111111111')
+u = [1,2,3,4,5,6,7,8,9,0, '+','-','(',')']
+print(u)
