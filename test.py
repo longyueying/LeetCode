@@ -1,1 +1,2 @@
-print(max[[1,2],[3,4]])
+a = 'abcdef'
+print(a[-1::-1])
