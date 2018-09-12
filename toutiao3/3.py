@@ -1,12 +1,10 @@
+import sys
 class Solution(object):
+    def load(self):
+        s = sys.stdin.readline().strip()
+        return s
     def restoreIpAddresses(self, s):
-        """
-        :type s: str
-        :rtype: List[str]
-        """
-
         self.res = []
-
         def solver(status, s):
             if len(status) == 4:
                 if len(s) == 0:
@@ -27,6 +25,6 @@ class Solution(object):
             result.append('.'.join(ip))
         return result
 
-if __name__=="__main__":
-    s = Solution()
-    print(s.restoreIpAddresses("8888"))
+s = Solution()
+str = s.load()
+print(len(s.restoreIpAddresses(str)))

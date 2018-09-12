@@ -1,2 +1,1 @@
-a = 'abcdef'
-print(a[-1::-1])
+print(bin(1)=='0b1')
