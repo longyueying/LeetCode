@@ -18,6 +18,7 @@ def solver():
                 return 1
         return 0
     if len(l)!=2:
+        
         return 0
     if a[l[0]]==b[l[1]] and a[l[1]]==b[l[0]]:
         return 1
